@@ -49,7 +49,7 @@ function email (em) {
   if (em.length > 254) {
     return new Error(requirements.email.length)
   }
-  if (!em.match(/^[^@]+@.+\..+$/)) {
+  if (!em.match(/^[^@]+\S+\..+$/)) {
     return new Error(requirements.email.valid)
   }
 
